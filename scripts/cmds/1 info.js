@@ -6,7 +6,7 @@ module.exports = {
     name: "info",
     aliases: ["inf", "in4"],
     version: "2.0",
-    author: "MR.AYAN",
+    author: "𝗔𝗵𝗺𝗲𝗱 𝗦𝗼𝗷𝗶𝗯",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -35,12 +35,12 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "♡︎𝗠𝗜𝗥𝗔 𝗞𝗜𝗠 𝗥𝗢𝗕𝗢𝗧♡︎";
-    const botPrefix = ".";
-    const authorName = "𝗠𝗥.𝗔𝗬𝗔𝗡";
-    const authorFB = "https://m.me/NOOBS.DEVELOPER.AYAN";
-    const authorInsta = "secret";
-    const status = "𝗣𝘂𝗿𝗲 𝗦𝗶𝗻𝗴𝗹𝗲";
+    const botName = "𝗦𝗼𝗷𝗶𝗯 𝗕𝗢𝗧..!";
+    const botPrefix = "!";
+    const authorName = "𝗔𝗵𝗺𝗲𝗱 𝗦𝗼𝗷𝗶𝗯";
+    const authorFB = "www.facebook.com/ahmed.sojib49/";
+    const authorInsta = "www.instagram.com/ahmed.sojib49";
+    const status = "𝗦𝗶𝗻𝗴𝗹𝗲";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];
@@ -58,31 +58,31 @@ module.exports = {
 
     message.reply({
       body: `
-≡≡║Bot & Owner Info║≡≡
+≡≡║𝗕𝗼𝘁 & 𝗢𝘄𝗻𝗲𝗿 𝗜𝗻𝗳𝗼║≡≡
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
-➠Bot Name↠ ${botName}
+❏ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲↠ ${botName}
 
-➠Bot Prefix↠ ${botPrefix}
+❏𝗕𝗼𝘁 𝗣𝗿𝗲𝗳𝗶𝘅↠ ${botPrefix}
 
-➠Owner Name↠ ${authorName}
+❏𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲↠ ${authorName}
 
-➠Facebook↠ ${authorFB}
+❏𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸↠ ${authorFB}
 
-➠Instagram↠ ${authorInsta}
+❏𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺↠ ${authorInsta}
 
-➠Status↠ ${status}
+❏𝗦𝘁𝗮𝘁𝘂𝘀↠ ${status}
 
-➠Date↠ ${date}
+❏𝗗𝗮𝘁𝗲↠ ${date}
 
-➠Time↠ ${time}
+❏𝗧𝗶𝗺𝗲↠ ${time}
 
-➠Uptime↠ ${uptimeString}
+❏𝗨𝗽𝘁𝗶𝗺𝗲↠ ${uptimeString}
 
 ﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋
-Thanks for using ↠ \➪${botName}
+𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗨𝘀𝗶𝗻𝗴 ↠ ${botName}
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏`,
       attachment: await global.utils.getStreamFromURL(link)
     });
   }
-};
+}; 
