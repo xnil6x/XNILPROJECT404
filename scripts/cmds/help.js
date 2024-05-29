@@ -14,7 +14,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.0",
-    author: "NTKhang",
+    author: "𝗦𝗼𝗷𝗶𝗯",
     countDown: 20,
     role: 0,
     shortDescription: {
@@ -37,7 +37,7 @@ module.exports = {
   },
 
   langs: {
-    en: {			help: '
+    en: {			help: `
 ╭───⭓『 𝗔𝗜 』 
 │⭔kuba ⭔gemini
 │⭔gpt ⭔sdxl 
