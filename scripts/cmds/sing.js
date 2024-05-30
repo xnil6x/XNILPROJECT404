@@ -69,7 +69,7 @@ module.exports = {
     name: "sing",
     version: "1.0",
     aliases: ["sound", "song"],
-    author: "MR.AYAN",
+    author: "Sojib",
     countDown: 10,
     role: 0,
     shortDescription: "play music from yt",
