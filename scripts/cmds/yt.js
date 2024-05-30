@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "youtube",
+    name: "yt",
     version: "1.0",
     role: 0,
     author: "MR.AYAN",
