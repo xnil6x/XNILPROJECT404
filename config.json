@@ -24,9 +24,10 @@
   ],
   "authorName": "𝐗-𝐍𝐢𝐥 𝐗𝐡𝐨𝐰𝐝𝐡𝐮𝐫𝐲",
   "whiteListMode": {
-    "enable": false,
+    "enable": true,
     "whiteListIds": [
-      ],
+      "100000768468627"
+    ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "𝐗𝐍𝐈𝐋-𝟔𝐗𝐁𝐎𝐓",
