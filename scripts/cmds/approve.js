@@ -1,71 +1,96 @@
-const fs = require('fs');
+const fs = require("fs");
 
 module.exports = {
- config: {
- name: "approve2",
- version: "1.0",
- author: "Loufi",
- countDown: 5,
- role: 2,
- shortDescription: "",
-		longDescription: "",
- category: "admin",
- guide: {
- en: "{pn} [add|del|list]",
- vi: "Để sử dụng lệnh này, hãy gõ /approve [add/delete] [thread ID]"
- }
- },
- onStart: async function ({ message,api, args, threadsData }) {
- 
- const threadsFile = 'threads.json';
+  config: {
+    name: "approve",
+    author: "Jun",
+    countDown: 0,
+    role: 0,
+    category: "owner",
+    shortDescription: {
+      en: ""
+    }
+  },
 
- if (args.length < 1) {
- message.reply("Syntax error: Type approve del (tid)| add (tid) | list");
- return;
- }
+  onLoad: async function() {
+    const dataPath = __dirname + "/cache/approvedThreads.json";
+    const pendingPath = __dirname + "/cache/pendingThreads.json";
 
- const action = args[0];
- const threadId = args[1];
- const threadData = await threadsData.get(threadId);
-const threadName = threadData.threadName;
+    if (!fs.existsSync(dataPath)) {
+      fs.writeFileSync(dataPath, JSON.stringify([]));
+    }
 
+    if (!fs.existsSync(pendingPath)) {
+      fs.writeFileSync(pendingPath, JSON.stringify([]));
+    }
+  },
 
- let threads = [];
- try {
- threads = JSON.parse(fs.readFileSync(threadsFile));
- } catch (err) {
- console.error('', err);
- }
+  onStart: async function({ event, api, args }) {
+    const { threadID, messageID, senderID } = event;
+    const dataPath = __dirname + "/cache/approvedThreads.json";
+    const pendingPath = __dirname + "/cache/pendingThreads.json";
+    let data = JSON.parse(fs.readFileSync(dataPath));
+    let pending = JSON.parse(fs.readFileSync(pendingPath));
+    let msg = "";
+    let idBox = args[0] || threadID;
 
- if (action === "add") {
- if (!threads.includes(threadId)) {
- threads.push(threadId);
- fs.writeFileSync(threadsFile, JSON.stringify(threads));
- message.reply(`Thread ${threadName} has been approved successfully ✅`);
- } else {
- message.reply(`Thread ${threadName} is already approved ✅`);
- }
- } else if (action === "del") {
- const index = threads.indexOf(threadId);
- if (index >= 0) {
- threads.splice(index, 1);
- fs.writeFileSync(threadsFile, JSON.stringify(threads));
- message.reply(`Thread ${threadName} has been disapproved ✅`); api.removeUserFromGroup(api.getCurrentUserID(), threadId);
- } else {
- message.reply(`Thread ${threadName} is not approved yet ❌`, uid);
- }
- } else if (action === "list") {
- let threadList = "";
- for (let i = 0; i < threads.length; i++) {
- const threadData = await threadsData.get(threads[i]);
- const name = threadData.threadName;
- threadList += `${i + 1}. ${name} (${threads[i]})\n`;
- }
- if (threadList === "") {
- message.reply("No threads approved ❌");
- } else {
- message.reply(`Approved threads:\n${threadList}`);
- }
- }
- }
-};
+    if (args[0] == "list") {
+      msg = "LIST OF APPROVED BOXES! ";
+      let count = 0;
+
+      for (const e of data) {
+        msg += `${count += 1}. ID: ${e}`;
+      }
+
+      api.sendMessage(msg, threadID, messageID);
+    } else if (args[0] == "del") {
+      idBox = args[1] || event.threadID;
+
+      if (isNaN(parseInt(idBox))) {
+        api.sendMessage("Not a number.", threadID, messageID);
+        return;
+      }
+
+      if (!data.includes(idBox)) {
+        api.sendMessage("The box was not approved before! ", threadID, messageID);
+        return;
+      }
+
+      api.sendMessage(`Box ${idBox} has been removed from bot permission list `, threadID, () => {
+        if (!pending.includes(idBox)) {
+          pending.push(idBox);
+        }
+
+        data.splice(data.indexOf(idBox), 1);
+        fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+        fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2));
+      }, messageID);
+    } else if(args[0] == "pending") {
+      msg = "DANH SÁCH CÁC BOX CHỜ ĐƯỢC DUYỆT!";
+      let count = 0;
+
+      for (const e of pending) {
+        const name = (await api.getThreadInfo(e)).name || "Nhóm Chat";
+        msg += `${count += 1}. ${name}\ID: ${e}`;
+      }
+
+      api.sendMessage(msg, threadID, messageID);
+    } else if (isNaN(parseInt(idBox))) {
+      api.sendMessage("Invalid ID entered ", threadID, messageID);
+    } else if (data.includes(idBox)) {
+      api.sendMessage(`ID ${idBox} was approved before! `, threadID, messageID);
+    } else {
+      api.sendMessage("» Box has been approved by admin.\Use help to see more commands.", idBox, (error, info) => {
+        if (error) {
+          api.sendMessage("An error occurred, make sure that the ID you entered is valid and the bot is in the box! ", threadID, messageID);
+        } else {
+          data.push(idBox);
+          pending.splice(pending.indexOf(idBox), 1);
+          fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+          fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2));
+          api.sendMessage(`» Box approval successful:\${idBox}`, threadID, messageID);
+        }
+      });
+    }
+  }
+}; 
