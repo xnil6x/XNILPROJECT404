@@ -6,7 +6,7 @@ module.exports = {
     name: "info",
     aliases: ["inf", "in4"],
     version: "2.0",
-    author: "𝗔𝗵𝗺𝗲𝗱 𝗦𝗼𝗷𝗶𝗯",
+    author: "𝐗𝐍𝐈𝐋",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -35,12 +35,12 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "𝗦𝗼𝗷𝗶𝗯 𝗕𝗢𝗧..!";
-    const botPrefix = "!";
-    const authorName = "𝗔𝗵𝗺𝗲𝗱 𝗦𝗼𝗷𝗶𝗯";
-    const authorFB = "www.facebook.com/ahmed.sojib49/";
-    const authorInsta = "www.instagram.com/ahmed.sojib49";
-    const status = "𝗦𝗶𝗻𝗴𝗹𝗲";
+    const botName = global.GoatBot.config.botNickname;
+    const botPrefix = global.GoatBot.config.prefix;
+    const authorName = "𝐗-𝐍𝐢𝐥 𝐗𝐡𝐨𝐰𝐝𝐡𝐮𝐫𝐲";
+    const authorFB = "https://www.facebook.com/xnilxhowdhury143";
+    const authorInsta = "𝐂𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧";
+    const status = "𝐒𝐢𝐧𝐠𝐥𝐞";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];

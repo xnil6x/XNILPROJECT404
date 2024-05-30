@@ -84,8 +84,8 @@ module.exports = {
         
          // const attachment = await global.utils.getStreamFromURL(`${threadInfo.imageSrc}`);
          // const attachment = await global.utils.getStreamFromURL(url);
-        const { data } = await axios.get('https://111-1-ASIFx69.replit.app/anime?apikey=ASIFx69');
-        const attachment = await global.utils.getStreamFromURL(data.url);
+        const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
+    const link = urls[Math.floor(Math.random() * urls.length)];
         
         await message.reply({
           body: `
