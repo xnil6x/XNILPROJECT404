@@ -38,118 +38,83 @@ module.exports = {
 
   langs: {
     en: {			help: `
-╭───⭓『 𝗔𝗜 』 
-│⭔kuba ⭔gemini
-│⭔gpt ⭔sdxl 
-│⭔sdxl2 ⭔imagine
-╰───────────⭓
-╭───⭓『 𝗔𝗡𝗜𝗠𝗘 』
-│⭔waifu ⭔SAUCE
-│⭔manga ⭔animeinfo
-╰───────────⭓
-╭───⭓『 𝗦𝗧𝗨𝗗𝗬 』
-│⭔Dictionary ⭔summarize
-│⭔autoseen ⭔define
-╰───────────⭓
-╭───⭓『 𝗧𝗢𝗢𝗟𝗦 』
-│⭔caller ⭔pm ⭔clean 
-│⭔autoseen ⭔memstole
-│⭔clear ⭔translate 
-│⭔imgur ⭔weather 
-│⭔profile ⭔removebg
-│⭔v2a ⭔wallapaper
-│⭔time ⭔extract
-│⭔jsontomongodb
-│⭔appstore ⭔teach
-│⭔jsontosqlite⭔pin
-╰───────────⭓
-╭───⭓『 𝗚𝗥𝗢𝗨𝗣 𝗖𝗛𝗔𝗧 』
-│⭔Filteruser ⭔All 
-│⭔kick ⭔uid ⭔info
-│⭔warn ⭔tid ⭔antiout
-│⭔leave ⭔count ⭔rules
-│⭔unsend ⭔badwords
-│⭔antichange ⭔setname
-│⭔adduser ⭔refresh 
-│⭔onlyadminbox  antiout
-│⭔setname  autosetname
-│⭔setleave ⭔setwelcome
-│⭔topexp ⭔groupinfo
-│⭔grouptag ⭔supportgc
-╰──────────────⭓
-╭───⭓『 𝗢𝗪𝗡𝗘𝗥 』
-│⭔setrole ⭔admin
-│⭔user ⭔approve 
-│⭔pending ⭔accept
-│⭔file ⭔ban ⭔thread
-│⭔sendnoti ⭔adc ⭔kera
-│⭔getfbstate ⭔join ⭔war
-│⭔leaveall ⭔listbox
-│⭔notice ⭔notification
-╰───────────⭓
-╭───⭓『 𝗜𝗠𝗔𝗚𝗘 』
-│⭔avatar ⭔fb
-│⭔banner
-│⭔pin ⭔trigger
-╰───────────⭓
-╭───⭓『 𝗙𝗨𝗡 』
-│⭔emojimix ⭔emoji
-│⭔pet ⭔say 
-│⭔jane ⭔snoop
-│⭔pair ⭔cdp
-│⭔simsimi ⭔randomname
-│⭔fight ⭔slap
-│⭔emojimean ⭔pair
-│⭔calculate ⭔anya2
-│⭔rizz ⭔roast
-│⭔gojo ⭔hack
-╰───────────⭓
-╭───⭓『 𝗕𝗔𝗡𝗞 』
-│⭔Bank ⭔work 
-│⭔balance ⭔daily
-╰───────────⭓
-╭───⭓『 𝗠𝗘𝗗𝗜𝗔 』
-│⭔play ⭔insta 
-│⭔song ⭔videofb
-│⭔ytb ⭔lyrics
-│⭔Movie ⭔youtube
-│⭔shoti ⭔shoti2
-│⭔tiktok ⭔fun
-│⭔aniedit ⭔aniedit2
-│⭔animeme ⭔entertain
-╰───────────⭓
-╭───⭓『 𝗥𝗔𝗡𝗞 』
-│⭔rank ⭔rankup
-│⭔setrankup
-│⭔customrankcard  
-╰───────────⭓
-╭───⭓『 𝗦𝗬𝗦𝗧𝗘𝗠 』
-│⭔setrole ⭔prefix 
-│⭔setalia ⭔backupdata
-│⭔help ⭔del ⭔eval
-│⭔sorthelp ⭔status
-│⭔ping ⭔cmd 
-│⭔loadconfig ⭔offbot
-│⭔restart ⭔setavt
-│⭔setlang ⭔shell
-│⭔update ⭔event
-╰───────────⭓ 
-╭───⭓『 𝗚𝗔𝗠𝗘 』
-│⭔bal ⭔guessnumb
-│⭔quiz⭔slot 
-│⭔Sicbo ⭔choose
-│⭔wordgame ⭔rps
-│⭔tod ⭔country
-╰───────────⭓
-╭───⭓『 𝗘𝗡𝗝𝗢𝗬 』
-│ » Total cmds: [ %4 ].
-│ Type: [%5help to 
-│<cmd> ] to learn
-│ the usage:) 
-╰───────────⭓
-╭─────⭓
-│『 𝗔𝗛𝗠𝗘𝗗 𝗦𝗢𝗝𝗜𝗕 ‌』
-╰────────⭓`,
+╭─╮
+│『 𝗜𝗡𝗙𝗢 』
+│☪︎define  ☪︎history
+│☪︎ping ☪︎time ❌stalk
+│☪︎membercount ☪︎nn
+╰───────────ꔪ
+╭─╮
+│『 𝗔𝗡𝗜𝗠𝗘 』
+│あanistatus あanigif
+│あanipic あanime
+│あanivoice あanitrace
+│あlofianime あanivid
+│あaniquiz あaniwatch
+│あanyaa あmangadex
+│あaniquotes あanisearch
+╰─────────ꔪ
+╭─╮
+│『 𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡 』
+│⊙emi ⊙sdxl
+│⊙animex ⊙animagine
+╰─────────ꔪ
+╭─╮
+│『 𝗧𝗢𝗢𝗟𝗦 』
+│☭pin ☭shell
+│☭prompt ☭clean
+│☭getlink ☭rembg
+│☭tinyurl ☭stalk
+│☭horoscope ☭collage
+│☭monitor ☭usage
+╰─────────ꔪ
+╭─╮
+│『 𝗘𝗡𝗧𝗘𝗥𝗧𝗔𝗜𝗡𝗠𝗘𝗡𝗧 』
+│♡fun ♡sciencememe
+│♡twixtor ♡sad
+│♡lyricalvideo ♡fun2
+│♡insta ♡reels
+│♡lyricvideo ♡quote 
+│♡pmvd ♡pmeme
+│♡wifey ♡shoti
+│♡memvoice ♡tiktok
+╰──────────ꔪ
+╭─╮
+│『 𝗥𝗔𝗡𝗞 & 𝗚𝗔𝗠𝗘𝗦 』
+│✯rank ✯rankup
+│✯cc ✯quiz ✯tof
+│✯memorytest ✯mg
+│✯wordguess ✯guessmusic
+│✯dicedash ✯slot
+│✯guessactor ✯lb
+│✯mindgame
+╰───────ꔪ
+
+╭─╮
+│『 𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞 』
+│❌page
+│❌group
+│❌post
+╰────────ꔪ
+╭─╮
+│『 𝗠𝗨𝗦𝗜𝗖 』
+│♪sing ♪audio
+│♪video ♪media
+│♪lv ♪lyricalvideo
+│♪spotify ♪mvdo
+╰──────────ꔪ
+╭─────────╮
+│『 𝗔𝗜 & 𝗧𝗢𝗢𝗟𝗦 』
+│❃gpt
+│❃cmdstore
+│❃store
+│❃filter
+│❃gemini
+├────────⭔⭓ 
+├ » Type $help <cmd> to learn.
+├────────⭔
+│ [ 𝗚𝗼𝗮𝘁𝗕𝗼𝘁🤍🪽 ]
+╰─────────────⭓ `,
       help2: "%1◊\n│ » Currently, the bot has %2 commands that can be used\n│ » Total Cmds: %3 \n│ %4\n╰─────────────⭓",
       commandNotFound: "Command \"%1\" does not exist",
       getInfoCommand: "⭓─── NAME ────⭓\n » %1\n⭓─── INFO ───⭓\n » Author: %8\n » Description: %2\n\⭓─── Usage ───⭓\n%9\n⭓───────⭓",
