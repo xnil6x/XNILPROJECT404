@@ -64,8 +64,8 @@ module.exports = {
       msg += `╔═══•|❤️🧡💛💚🩵❤️‍🩹|•═══╗\n\n❤️𝐎𝐖𝐍𝐄𝐑-𝐍𝐀𝐌𝐄 ~ 𝐗-𝐍𝐢𝐥 𝐗𝐡𝐨𝐰𝐝𝐡𝐮𝐫𝐲💛\n\n𝐅𝐁-𝐈𝐃-𝐋𝐈𝐍𝐊 https://www.facebook.com/xnilxhowdhury143\n\n╚═══▓❤️🧡💛💚🩵❤️‍🩹▓═══╝`; // its not decoy so change it if you want 
 
       const helpListImages = [
-        "https://i.imgur.com/kgi0jVj.jpeg", // don't change imgur
-        "https://i.imgur.com/FYCVBcw.jpeg"
+        "https://i.imgur.com/kapKVmr.jpeg", // don't change imgur
+        "https://i.imgur.com/mAMxlFF.jpeg"
         // don't change imgur
       ];
 
