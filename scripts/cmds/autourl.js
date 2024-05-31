@@ -7,9 +7,9 @@ const { getStreamFromURL, shortenURL, randomString } = global.utils;
 module.exports = {
   threadStates: {},
   config: {
-    name: 'autourl',
+    name: 'autolink',
     version: '1.0',
-    author: 'MR.AYAN',
+    author: 'Kshitiz',
     countDown: 5,
     role: 0,
     shortDescription: 'Auto video downloader for Instagram, Facebook, and TikTok',
@@ -27,7 +27,7 @@ module.exports = {
     }
 
     if (event.body.toLowerCase().includes('autolink')) {
-      api.sendMessage("AutoLink is active.", event.threadID, event.messageID);
+      api.sendMessage("ᴀᴜᴛᴏʟɪɴᴋ ɪs ᴀᴄᴛɪᴠᴇ...♻", event.threadID, event.messageID);
     }
   },
   onChat: async function ({ api, event }) {
@@ -35,7 +35,7 @@ module.exports = {
       const { url } = this.checkLink(event.body);
       console.log(`Attempting to download from URL: ${url}`);
       this.downLoad(url, api, event);
-      api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
+      api.setMessageReaction("💐", event.messageID, (err) => {}, true);
     }
   },
   downLoad: function (url, api, event) {
@@ -64,7 +64,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `✅𝑽𝑰𝑫𝑬𝑶 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝑺𝑼𝑪𝑪𝑬𝑺𝑺𝑭𝑼𝑳\n\n🔗 Download Url: ${shortUrl}`;
+      const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
 
       api.sendMessage({
         body: messageBody,
@@ -90,7 +90,7 @@ module.exports = {
         response.data.pipe(fs.createWriteStream(path));
         response.data.on('end', async () => {
           const shortUrl = await shortenURL(videoUrl);
-          const messageBody = `✅𝑽𝑰𝑫𝑬𝑶 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝑺𝑼𝑪𝑪𝑬𝑺𝑺𝑭𝑼𝑳\n\n🔗 Download Url: ${shortUrl}`;
+          const messageBody = `✅🔗 Download Url: ${shortUrl}`;
 
           api.sendMessage({
             body: messageBody,
@@ -98,7 +98,7 @@ module.exports = {
           }, event.threadID, () => fs.unlinkSync(path), event.messageID);
         });
       } else {
-        api.sendMessage("", event.threadID, event.messageID);
+        api.sendMessage("❌", event.threadID, event.messageID);
       }
     } catch (err) {
       console.error(err);
@@ -118,7 +118,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `✅𝑽𝑰𝑫𝑬𝑶 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫𝑰𝑵𝑮 𝑺𝑼𝑪𝑪𝑬𝑺𝑺𝑭𝑼𝑳\n\nDownload Url: ${shortUrl}`;
+      const messageBody = `✅  Download Url: ${shortUrl}`;
 
       api.sendMessage({
         body: messageBody,
@@ -133,7 +133,7 @@ module.exports = {
       if (url.includes("instagram")) {
         axios({
           method: "GET",
-          url: `https://insta-kshitiz.onrender.com/insta?url=${encodeURIComponent(url)}`
+          url: `https://public-apis-project86.vercel.app/api/insta?url=${encodeURIComponent(url)}`
         })
         .then(res => {
           console.log(`API Response: ${JSON.stringify(res.data)}`);
@@ -296,4 +296,7 @@ async function fbDownloader(url) {
       success: false
     };
   }
-} 
+}
+
+
+//insta api credit :- Rehat and tiktok and fb video code credit goest to ntkhang. all the api used in code is not owned by me thank you. 
