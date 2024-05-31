@@ -35,9 +35,9 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = global.GoatBot.config.botNickname;
+    const botName = global.GoatBot.config.botNickName;
     const botPrefix = global.GoatBot.config.prefix;
-    const authorName = "𝐗-𝐍𝐢𝐥 𝐗𝐡𝐨𝐰𝐝𝐡𝐮𝐫𝐲";
+    const authorName = global.GoatBot.config.authorName;
     const authorFB = "https://www.facebook.com/xnilxhowdhury143";
     const authorInsta = "𝐂𝐨𝐦𝐢𝐧𝐠 𝐬𝐨𝐨𝐧";
     const status = "𝐒𝐢𝐧𝐠𝐥𝐞";
