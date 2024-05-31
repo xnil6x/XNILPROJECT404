@@ -1,8 +1,8 @@
-<p align="center"><a href="https://www.facebook.com/AYAN.JANU.LOVE.YOU.MY.HEART" target="_blank" rel="noopener noreferrer">
+<p align="center"><a href="https://www.facebook.com/xnilxhowdhury143" target="_blank" rel="noopener noreferrer">
   <img src="https://i.imgur.com/oapEhQg.gif" width="50" style="margin-right: 10px;"></a>
 </p>
 <h5 align="center">
-🔹Mohammad Ayan
+🔹𝐒𝐚𝐛𝐛𝐢𝐫 𝐀𝐡𝐦𝐞𝐝 𝐍𝐢𝐥
 </h5>
 
 ## Introduction
@@ -34,27 +34,21 @@
 - [📜 **License**](#-license)
 
 <div align="center">
-			<h3>My Replit Account ->
-			<a href="https://replit.com/@CliffvincentTor" style="color: green;">@Ayanchoudhuri🔥</a>
-				<br>
-	My Facebook Account ->
-	<a href="https://www.facebook.com/swordigo.swordslush?mibextid=rS40aB7S9Ucbxw6v" style="color: black;">Ayan🚀</a></h3></div>
-
-<img align="center" src="https://i.imgur.com/wovTalh.jpeg"/>
 
 
-🔹Mohammad Ayan
+
+XNIL XHOWDHURY 
 
 
-# Editing AYAN CHOWDHURY😘
+# Editing XNIL XHOWDHURY 😘
 
-# GOATBOTV3 real owner I don’t know
+# GOATBOTV2real owner I don’t know
 
 # Everyone run this GOWTBOTV3 for fun
 
 # If there is any error, I will fix it by knocking on Facebook
 
-# https://www.facebook.com/AYAN.JANU.LOVE.YOU.MY.HEART
+# https://www.facebook.com/xnilxhowdhury143
 
 # I hope you enjoy
 
